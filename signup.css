@@ -1,0 +1,56 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: #eff2f6;
+}
+
+.container{
+    max-width: 1530px;
+}
+
+.signup{
+    background-color: #ffffff;
+    padding-inline: 100px;
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+}
+
+.signup-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 100px;
+}
+
+input{
+    height: 52px;
+    width: 378px;
+    padding-inline: 20px;
+}
+
+p{
+    font-size: larger;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+    color: #0f6fec;
+}
+h1{
+    margin-bottom: 30px;
+    background-color: #ffffff;
+}
+
+#singup{
+    height: 52px;
+    width: 378px;
+    background-color:#0f6fec;
+    color: #ffffff;
+}
