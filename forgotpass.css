@@ -1,0 +1,77 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: #eff2f6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width: 1530px;
+}
+
+.forgot-pass-page{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 100px;
+}
+
+.forgot-password{
+    background-color: #ffffff;
+    padding-inline: 30px;
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+input{
+    height: 52px;
+    width: 378px;
+    padding-inline: 20px;
+    border: 1px solid black;
+    font-size: medium;
+    font-weight: 300;
+    position: relative;
+}
+
+p{
+    font-size: medium;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    color: #252525;
+}
+
+a{
+    text-decoration: none;
+    color: #0f6fec;
+}
+h1{
+    margin-bottom: 10px;
+    font-size: 40px;
+    background-color: #ffffff;
+}
+
+#for-passBtn{
+    height: 52px;
+    width: 378px;
+    background-color:#0f6fec;
+    color: #ffffff;
+    border: 1px solid #0f6fec;
+}
+
+.copyright{
+    color: #bababe;
+}
+
+#eye_slash{
+    position: absolute;
+    top: 368px;
+    right: 600px;
+}
+ 
