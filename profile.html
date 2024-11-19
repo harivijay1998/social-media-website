@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Profile</title>
+<link rel="stylesheet" href="profile.css">
+<script src="https://kit.fontawesome.com/48fa496ddd.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="profile-container">
+        <div class="left-section">
+            <div class="cover-photo">
+                <img src="images\05-C1743GBx.jpg" alt="Cover Photo">
+            </div>
+            
+            <div class="profile-info">
+                <div class="profile-pic">
+                    <img src="images\07-DLMl_mTI.jpg" alt="Profile Picture">
+                </div>
+                <div class="user-details">
+                    <h2>Sam Lanson <span class="verified">✔️</span></h2>
+                    <p>250 connections</p>
+                    <div class="additional-info">
+                        <span>👨‍💻 Lead Developer</span>
+                        <span>📍 New Hampshire</span>
+                        <span>📅 Joined on Nov 26, 2019</span>
+                    </div>
+                </div>
+                <button class="edit-profile">Edit profile</button>
+            </div>
+
+            <div class="tabs">
+                <a href="#" class="tab active">Feed</a>
+                <a href="#" class="tab">About</a>
+                <a href="#" class="tab">Connections <span class="badge">300</span></a>
+                <a href="#" class="tab">Media</a>
+                <a href="#" class="tab">Videos</a>
+                <a href="#" class="tab">Events</a>
+                <a href="#" class="tab">Activity</a>
+            </div>
+
+            <div class="feed-input">
+                <input type="text" placeholder="Share your thoughts..." id="post-content">
+                
+                <div class="feed-actions">
+                    <button id="photo">📸 Photo</button>
+                    <button>🎥 Video</button>
+                    <button>📅 Event</button>
+                    <button>😊 Feeling/Activity</button>
+                    <button id="post">POST ➤</button>
+                </div>
+
+                <div class="img-popup">
+                    <h1 >Add Post Photo</h1>
+                    <input type="text" placeholder="Share your thoughts..." id="post-content1">
+                    <label for="feedimage" class="file-label"><i class="fa-solid fa-image fa-lg"></i> </label>
+                    <input type="file" id="feedimage">
+                    <div class="image-preview-container"></div>
+                    <button id="post-popup">POST ➤</button>
+                    <button id="close-post">X</button>
+                </div>
+            </div>
+<div class="post-display"></div>
+
+            
+        </div>
+
+    
+        <div class="right-section">
+            <div class="about-section">
+                <h3>About</h3>
+                <div class="about-content">
+                </div>
+            </div>
+
+            <div class="experience-section">
+                <h3>Experience</h3>
+                <div class="experience-content">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="profile.js" defer></script>
+</body>
+</html>

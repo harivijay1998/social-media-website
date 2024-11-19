@@ -1,0 +1,263 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #eff2f6;
+}
+
+.container{
+    max-width: 1530px;
+}
+
+header{
+    padding-inline: 120px;
+    padding-block: 20px;
+    background-color: #ffffff;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.sec2,.sec1{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.sec1{
+    gap: 10px;
+    position: relative;
+}
+ul{
+    display: none;
+}
+
+.profile-img
+{
+    height: 39px;
+    width: 39px;
+    border-radius: 5px;
+}
+.msg,.gear,.bell{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+     border: 1px solid #ccc;
+}
+
+a{
+    text-decoration: none;
+    color: #676a79;
+    font-size: large;
+}
+
+.search{
+    height: 40px;
+    width: 263px;
+    padding-inline-start: 40px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    
+}
+.spk{
+    width: 36px;
+    height: 40px;
+}
+.profileopt{
+    display: flex;
+    gap: 10px;
+}
+.mag-glass{
+    position: absolute;
+    left: 45px;
+    height: 25px;
+    width: 36px;
+    font-size: large;
+    border: none;
+    background-color: transparent;
+    color: #676a79;
+}
+
+.demo:hover{
+ ul{
+    display: block;
+    position: absolute;
+    list-style: none;
+    left: -20px;
+    top:30px;
+    background-color: white;
+
+    li{
+        margin-bottom: 10px;
+        padding: 10px;
+
+
+    }
+ }
+}
+
+li:hover{
+    background-color:  #0f6fec;
+    color: azure;
+}
+
+.pages:hover{
+    ul{
+       display: block;
+       position: absolute;
+       list-style: none;
+       left: 80px;
+       top:30px;
+       background-color: white;
+   
+       li{
+           margin-bottom: 10px;
+           padding: 10px;
+   
+   
+       }
+    }
+   }
+
+   .Account:hover{
+    ul{
+       display: block;
+       position: absolute;
+       list-style: none;
+       left: 190px;
+       top:30px;
+       background-color: white;
+   
+       li{
+           margin-bottom: 10px;
+           padding: 10px;
+   
+   
+       }
+    }
+   }
+
+   #profile-pic{
+        border: none;
+        background-color: transparent;
+   }
+
+   .dropdown {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+    position: absolute;
+    top:60px;
+    right:-10px
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.role {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.view-profile {
+    display: block;
+    text-align: center;
+    color: #0073e6;
+    text-decoration: none;
+    margin: 10px 0;
+    font-weight: 500;
+    background-color: #e7f0fd;
+    padding-block: 10px;
+}
+
+.menu {
+    margin: 10px 0;
+    background-color: #ffffff;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    
+    background-color: #ffffff;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sign-out {
+    border-top: 1px solid #eee;
+    font-weight: bold;
+    color: #d9534f;
+    border-bottom: 1px solid #eee;
+}
+
+.mode-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.mode-label {
+    color: #333;
+    font-weight: 500;
+}
+
+.mode-icons {
+    display: flex;
+}
+
+.mode-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.mode-btn:hover {
+    background-color: #0073e6;
+    color: #fff;
+}
