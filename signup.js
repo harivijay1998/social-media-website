@@ -1,10 +1,14 @@
 const signup = document.getElementById("singup");
 const validmsg = document.getElementById("msg4");
+const showpassword = document.getElementById("eye_slash");
+let newpass = document.getElementById("new-pass");
+let confirm = document.getElementById("con-pass");
+
+
 signup.addEventListener("click", () => {
   const newmail = document.getElementById("signup-mail").value;
-  console.log("mail", newmail);
-  const newpass = document.getElementById("new-pass").value;
-  const confirm = document.getElementById("con-pass").value;
+  newpass = document.getElementById("new-pass").value;
+  confirm = document.getElementById("con-pass").value;
 
   const passwordPattern =
     /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -15,19 +19,42 @@ signup.addEventListener("click", () => {
     password: newpass,
   };
 
-  localStorage.setItem("userprofile", JSON.stringify(users));
+  let userdetail = localStorage.getItem("userprofile");
+  userdetail = userdetail ? JSON.parse(userdetail) : []; 
 
-  const userdetail = JSON.parse(localStorage.getItem("userprofile"));
+  if (!Array.isArray(userdetail)) {
+    userdetail = []; 
+  }
+
   if (
     emailPattern.test(newmail) &&
     newpass === confirm &&
     passwordPattern.test(confirm)
   ) {
+    userdetail.push(users);
+
+    localStorage.setItem("userprofile", JSON.stringify(userdetail));
+
     window.location.href = "index.html";
   } else {
-    validmsg.innerHTML = "enter valid details";
-    newmail.style.border = "1px solid red";
-    newpass.style.border = "1px solid red";
-    confirm.style.border = "1px solid red";
+    validmsg.innerHTML = "Enter valid details";
+    document.getElementById("signup-mail").style.border = "1px solid red";
+    document.getElementById("new-pass").style.border = "1px solid red";
+    document.getElementById("con-pass").style.border = "1px solid red";
+  }
+});
+
+showpassword.addEventListener("click", () => {
+  if (newpass.type === "password") {
+    console.log("button-clicked");
+    newpass.type = "text";
+    confirm.type = "text";
+    showpassword.classList.remove("fa-eye-slash");
+    showpassword.classList.add("fa-eye");
+  } else {
+    newpass.type = "password";
+    confirm.type = "password";
+    showpassword.classList.remove("fa-eye");
+    showpassword.classList.add("fa-eye-slash");
   }
 });

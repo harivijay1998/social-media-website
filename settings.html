@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account-Settings</title>
+    <link rel="stylesheet" href="setting.css">
+    <script src="https://kit.fontawesome.com/48fa496ddd.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="settings-container">
+        <div class="right-section">
+            <div class="sec1">
+            <h3>Account Settings</h3>
+            <p>He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty gay assistance joy.<br/> Unaffected at ye of compliment alteration to.</p>
+            <form id="form">
+                    <div class="line1">
+                        <div class="firstname">
+                            <label>First name</label><br/>
+                            <input type="text"  id="firstName">
+                        </div>
+                        <div class="lastname">
+                            <label>Last name</label><br/>
+                            <input type="text"  id="lastName">
+                        </div>
+                        <div class="addname">
+                            <label>Additional name</label><br/>
+                            <input type="text"  id="addName">
+                        </div>
+                    </div>
+
+                    <div class="line2">
+                        <div class="username">
+                            <label>username</label><br/>
+                            <input type="text" id="username">
+                        </div>
+                        <div class="birthday">
+                            <label>Birthday</label><br/>
+                            <input type="date" id="birthDay">
+                        </div>
+                    </div>
+                    <input type="checkbox" ><label>Allow anyone to add you to their team</label>
+
+                    <div class="line3">
+                        <div class="phno">
+                            <label>PhoneNumber</label><br/>
+                            <input type="tel"  id="phone_no">
+                        </div>
+
+                        <div class="email">
+                            <label>Email</label><br />
+                            <input type="email" id="mailid">
+                        </div>
+                    </div>
+
+                    <div class="overview">
+                        <label>Overview</label><br/>
+                        <textarea id="overview" rows="3" cols="50"></textarea>
+                    </div>
+                    <button type="submit">Save changes</button>
+            </form>
+            </div> 
+
+            <div class="sec2">
+
+                <h2>Change your password</h2>
+                <p>See resolved goodness felicity shy civility domestic had but.</p>
+            
+                <form class="form">
+                  <div class="form-group">
+                    <label for="current-password">Current password</label>
+                    <div class="password-container">
+                      <input type="password" id="current-password" placeholder="Current password">
+                     
+                    </div>
+                  </div>
+            
+                  <div class="form-group">
+                    <label for="new-password">New password</label>
+                    <div class="password-container">
+                      <input type="password" id="new-password" placeholder="New password">
+                      
+                    </div>
+                    
+                  </div>
+            
+                  <div class="form-group">
+                    <label for="confirm-password">Confirm password</label><br/>
+                    <input type="password" id="confirm-password" placeholder="Confirm password">
+                    
+                  </div>
+            
+                  <button type="submit" class="btn">Update password</button>
+                </form>
+            </div>
+        </div>
+        <div class="left-section">
+            <div class="sec3">
+            <ul>
+                <li class="icon1"><i class="fa-solid fa-user fa-lg" style="color: #1b6af3;"></i>Account</li>
+                <li class="icon"><i class="fa-solid fa-bell fa-lg" style="color: #1b6af3;"></i>Notification</li>
+                <li class="icon"><i class="fa-solid fa-shield-halved fa-lg" style="color: #1b6af3;"></i>Privacy & Safety</li>
+                <li class="icon"><i class="fa-solid fa-handshake fa-lg" style="color: #1b6af3;"></i>Communications</li>
+                <li class="icon"><i class="fa-solid fa-message fa-lg" style="color: #1b6af3;"></i>Messaging</li>
+                <li class="icon"><i class="fa-solid fa-trash fa-lg" style="color: #1b6af3;"></i>Close Account</li>
+            </ul>
+            </div>
+            <div class="view-profilebtn">
+                <a href="profile.html">View Profile</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
