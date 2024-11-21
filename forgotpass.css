@@ -73,5 +73,7 @@ h1{
     position: absolute;
     top: 368px;
     right: 600px;
+    background-color: transparent;
+    border: none;
 }
  
