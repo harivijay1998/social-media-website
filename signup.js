@@ -37,7 +37,7 @@ signup.addEventListener("click", () => {
 
     window.location.href = "index.html";
   } else {
-    validmsg.innerHTML = "Enter valid details";
+    
     document.getElementById("signup-mail").style.border = "1px solid red";
     document.getElementById("new-pass").style.border = "1px solid red";
     document.getElementById("con-pass").style.border = "1px solid red";

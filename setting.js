@@ -8,35 +8,50 @@ let mob_no = document.getElementById("phone_no");
 let mail = document.getElementById("mailid");
 let content = document.getElementById("overview");
 
+let userdetail = JSON.parse(localStorage.getItem("userprofile")) || [];
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-   firstname = document.getElementById("firstName").value;
-   lastname = document.getElementById("lastName").value;
-   addname = document.getElementById("addName").value;
-   username = document.getElementById("username").value;
-   birthday = document.getElementById("birthDay").value;
-   mob_no = document.getElementById("phone_no").value;
-   mail = document.getElementById("mailid").value;
-   content = document.getElementById("overview").value;
+  
+  const accountDetails = {
+    firstName: firstname.value,
+    lastName: lastname.value,
+    addName: addname.value,
+    userName: username.value,
+    birthday: birthday.value,
+    mob_no: mob_no.value,
+    mail: mail.value,
+    description: content.value,
+  };
 
-   const accountDetails={
-    firstName:firstname,
-    lastName:lastname,
-    addName:addname,
-    userName:username,
-    birthday:birthday,
-    mob_no:phone_no,
-    mail:mail,
-    descrption:content
-   }
+  let storeddetails = JSON.parse(localStorage.getItem("details")) || [];
+  storeddetails.push(accountDetails);
+  localStorage.setItem("details", JSON.stringify(storeddetails));
+});
 
-   const storeddetails = JSON.parse(localStorage.getItem("details"));
-   if(!Array.isArray(storeddetails)){
-    storeddetails=[];
-   }
+const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-   localStorage.setItem("details",JSON.stringify(accountDetails))
+let accountbtn = document.querySelector(".btn");
+let currentpass = document.getElementById("current-password");
+let newpassword = document.getElementById("new-password");
+let confirmpass = document.getElementById("confirm-password");
 
-   
+accountbtn.addEventListener("click", () => {
+  const currentpassValue = currentpass.value;
+  const newpasswordValue = newpassword.value;
+  const confirmpassValue = confirmpass.value;
 
+  let userIndex = userdetail.findIndex(user => user.password === currentpassValue);
+
+  if (userIndex !== -1) {
+    if (newpasswordValue === confirmpassValue && passwordPattern.test(newpasswordValue)) {
+      userdetail[userIndex].password = newpasswordValue;
+      localStorage.setItem("userprofile", JSON.stringify(userdetail));
+      alert("Password changed successfully!");
+    } else {
+      alert("New passwords do not match or do not meet the criteria.");
+    }
+  } else {
+    alert("Current password is incorrect.");
+  }
 });
