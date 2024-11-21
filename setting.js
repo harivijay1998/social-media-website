@@ -10,9 +10,14 @@ let content = document.getElementById("overview");
 
 let userdetail = JSON.parse(localStorage.getItem("userprofile")) || [];
 
+// Redirect if userprofile is empty
+if (userdetail.length === 0) {
+  window.location.href = "signup.html";
+}
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  
+
   const accountDetails = {
     firstName: firstname.value,
     lastName: lastname.value,
@@ -36,7 +41,9 @@ let currentpass = document.getElementById("current-password");
 let newpassword = document.getElementById("new-password");
 let confirmpass = document.getElementById("confirm-password");
 
-accountbtn.addEventListener("click", () => {
+accountbtn.addEventListener("click", (e) => {
+  e.preventDefault();  // Prevent the default form submission
+
   const currentpassValue = currentpass.value;
   const newpasswordValue = newpassword.value;
   const confirmpassValue = confirmpass.value;
@@ -53,5 +60,6 @@ accountbtn.addEventListener("click", () => {
     }
   } else {
     alert("Current password is incorrect.");
+    window.location.href = "signup.html";
   }
 });
